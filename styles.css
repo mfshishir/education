@@ -1,0 +1,91 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+#banner {
+    background-image: url('banner.jpg');
+    background-size: cover;
+    color: #fff;
+    padding: 100px 20px;
+    text-align: center;
+}
+
+#courses {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.course {
+    background-color: #f4f4f4;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    padding: 20px;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+/* Include styles from previous example */
+
+#enroll-form {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+}
+
+#enroll-form form {
+    display: flex;
+    flex-direction: column;
+}
+
+#enroll-form form label {
+    margin-bottom: 10px;
+}
+
+#enroll-form form input,
+#enroll-form form select {
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#enroll-form form button {
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#enroll-form form button:hover {
+    background-color: #555;
+}

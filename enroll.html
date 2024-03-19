@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enroll - E-Learning Website</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>E-Learning Platform</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="courses.html">Courses</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <section id="enroll-form">
+        <h2>Enroll in Course</h2>
+        <div class="course">
+            <h3>Course 1</h3>
+            <p>Description of Course 1 goes here.</p>
+            <label for="password1">Course Password:</label>
+            <input type="password" id="password1" name="password1" required>
+            <button onclick="enroll('course1')">Enroll Now</button>
+        </div>
+
+        <div class="course">
+            <h3>Course 2</h3>
+            <p>Description of Course 2 goes here.</p>
+            <label for="password2">Course Password:</label>
+            <input type="password" id="password2" name="password2" required>
+            <button onclick="enroll('course2')">Enroll Now</button>
+        </div>
+
+        <!-- Add more courses as needed -->
+    </section>
+    
+    <footer>
+        <p>&copy; 2024 E-Learning Platform. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function enroll(course) {
+            var passwordField = document.getElementById('password' + course);
+            var password = passwordField.value;
+            var correctPasswords = {
+                'course1': 'password1',
+                'course2': 'password2'
+                // Add more courses and their passwords as needed
+            };
+            var coursePages = {
+                'course1': 'course1.html',
+                'course2': 'course2.html'
+                // Add more courses and their page links as needed
+            };
+    
+            // Check if password is correct for the course
+            if (password === correctPasswords[course]) {
+                alert('Enrolled successfully in ' + course);
+                // Redirect user to course page
+                window.location.href = coursePages[course];
+            } else {
+                alert('Incorrect password for ' + course);
+            }
+        }
+    </script>
+    
+</body>
+</html>
